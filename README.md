@@ -1,8 +1,13 @@
 # Market Research and Marketing
 
-Growth skills for Product & Marketing Managers — unified in one directory.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/skills-109-purple.svg)](README.md)
+[![Layers](https://img.shields.io/badge/layers-3-green.svg)](README.md)
+[![GitHub](https://img.shields.io/badge/github-design866%2Fmarket--research--and--marketing-black.svg)](https://github.com/design866/market-research-and-marketing)
 
-## Overview
+> ⚡ **109 Skills Unified** — Product & Marketing Manager skill suite for market research, strategy, product discovery, execution, GTM, analytics, and AI shipping.
+
+## 🎯 What's Inside
 
 Merged from two sources:
 - **Marketing** (48 original skills)
@@ -44,6 +49,28 @@ archify deliver workflow examples/merged-skills.workflow.json
 | PM Core | 31 | Discovery → Strategy → Execution |
 | PM Support | 14 | Research, AI, Toolkit |
 
-## License
+## 🎨 Cover
+
+![Cover](examples/cover.html)
+
+## 📈 Stats
+
+| Metric | Value |
+|--------|-------|
+| Total Skills | **109** |
+| Layers | **3** |
+| Modules | **10** |
+| Examples | **16** |
+| Tests | **150+** |
+
+## 💡 Use Cases
+
+- 🔍 **Market Research** — competitive analysis, user personas, journey mapping
+- 📝 **PRD & Strategy** — product requirements, SWOT, positioning
+- 🚀 **GTM Launch** — channels, launch planning, growth experiments
+- 📊 **Analytics** — A/B testing, cohort analysis, SQL queries
+- 🤖 **AI Shipping** — code review, delivery automation
+
+## 📜 License
 
 MIT
