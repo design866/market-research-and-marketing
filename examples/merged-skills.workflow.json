@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "PM Skill Usage Workflow",
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "discovery", "label": "Discovery phase", "focus": ["user", "research", "disc", "strat"], "note": "From market research to product strategy." },
+      { "id": "execution", "label": "Execution phase", "focus": ["exec", "gtm", "marketing"], "note": "Build, launch, and market the product." },
+      { "id": "measure", "label": "Measure phase", "focus": ["analytics", "ai", "final"], "note": "Ship, review, and iterate." }
+    ]
+  },
+  "lanes": [
+    { "id": "user", "label": "Product Manager" },
+    { "id": "discovery", "label": "Discovery" },
+    { "id": "strategy", "label": "Strategy" },
+    { "id": "execution", "label": "Execution" },
+    { "id": "marketing", "label": "Marketing" },
+    { "id": "measure", "label": "Measure & Iterate" }
+  ],
+  "phases": [
+    { "id": "discover", "label": "Discover", "fromCol": 0, "toCol": 1 },
+    { "id": "plan", "label": "Plan", "fromCol": 1, "toCol": 2 },
+    { "id": "build", "label": "Build & Launch", "fromCol": 2, "toCol": 3 },
+    { "id": "market", "label": "Market", "fromCol": 3, "toCol": 4 },
+    { "id": "iterate", "label": "Measure & Improve", "fromCol": 4, "toCol": 5 }
+  ],
+  "groups": [
+    { "id": "research-work", "label": "Market research", "lane": "discovery", "fromCol": 0, "toCol": 1, "variant": "emphasis" },
+    { "id": "strategy-work", "label": "Strategy formation", "lane": "strategy", "fromCol": 1, "toCol": 2, "variant": "emphasis" },
+    { "id": "exec-work", "label": "Build & ship", "lane": "execution", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "market-work", "label": "Go-to-market", "lane": "marketing", "fromCol": 3, "toCol": 4, "variant": "dashed" },
+    { "id": "measure-work", "label": "Analyze & refine", "lane": "measure", "fromCol": 4, "toCol": 5, "variant": "emphasis" }
+  ],
+  "mainPath": ["user", "research", "disc", "strat", "exec", "gtm", "marketing", "analytics", "final"],
+  "nodes": [
+    { "id": "user", "lane": "user", "col": 0, "type": "external", "label": "PM", "sublabel": "starts here", "width": 120 },
+    { "id": "research", "lane": "discovery", "col": 0, "type": "cloud", "label": "PM Research", "sublabel": "segments, personas, journey", "width": 132 },
+    { "id": "disc", "lane": "discovery", "col": 1, "type": "backend", "label": "PM Discovery", "sublabel": "features, assumptions", "width": 132 },
+    { "id": "strat", "lane": "strategy", "col": 2, "type": "backend", "label": "PM Strategy", "sublabel": "SWOT, canvas, vision", "width": 132 },
+    { "id": "exec", "lane": "execution", "col": 3, "type": "backend", "label": "PM Execution", "sublabel": "PRD, sprint, OKR", "width": 132 },
+    { "id": "gtm", "lane": "marketing", "col": 3, "type": "backend", "label": "PM GTM", "sublabel": "beachhead, motions", "width": 132 },
+    { "id": "marketing", "lane": "marketing", "col": 4, "type": "frontend", "label": "Marketing", "sublabel": "48 skills", "width": 132 },
+    { "id": "analytics", "lane": "measure", "col": 4, "type": "database", "label": "PM Analytics", "sublabel": "ab-test, cohort", "width": 132 },
+    { "id": "ai", "lane": "measure", "col": 5, "type": "security", "label": "PM AI Shipping", "sublabel": "code review", "width": 132 },
+    { "id": "final", "lane": "measure", "col": 5, "type": "backend", "label": "Output", "sublabel": "shipped product", "width": 132 }
+  ],
+  "edges": [
+    { "id": "user-research", "from": "user", "to": "research", "variant": "emphasis" },
+    { "id": "research-disc", "from": "research", "to": "disc", "variant": "default" },
+    { "id": "disc-strat", "from": "disc", "to": "strat", "variant": "emphasis" },
+    { "id": "strat-exec", "from": "strat", "to": "exec", "variant": "emphasis" },
+    { "id": "exec-gtm", "from": "exec", "to": "gtm", "label": "launch plan", "variant": "default" },
+    { "id": "gtm-marketing", "from": "gtm", "to": "marketing", "variant": "emphasis" },
+    { "id": "marketing-analytics", "from": "marketing", "to": "analytics", "label": "campaign data", "variant": "dashed" },
+    { "id": "analytics-ai", "from": "analytics", "to": "ai", "label": "results", "variant": "default" },
+    { "id": "ai-final", "from": "ai", "to": "final", "variant": "emphasis" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Flow", "items": ["Research → Discover → Strategy → Execution → GTM → Marketing → Measure"] },
+    { "dot": "rose", "title": "Feedback", "items": ["Analytics feeds back into discovery and strategy for iteration"] }
+  ]
+}

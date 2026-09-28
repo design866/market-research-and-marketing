@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Growth Skills — Merged Architecture",
+    "subtitle": "Marketing (48) + PM Core (69) = 109 skills unified",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "overview", "label": "Full architecture", "focus": ["user", "marketing", "pm-exec", "pm-disc", "pm-strat", "pm-analytics", "pm-gtm", "pm-research", "pm-ai", "pm-toolkit"], "note": "All 109 skills in one unified growth directory." },
+      { "id": "pm-core", "label": "PM core flow", "focus": ["pm-disc", "pm-strat", "pm-exec", "pm-gtm", "pm-analytics"], "note": "Product discovery → strategy → execution → GTM → analytics." },
+      { "id": "marketing-layer", "label": "Marketing layer", "focus": ["marketing", "pm-gtm"], "note": "Marketing skills feed into GTM strategy." }
+    ]
+  },
+  "components": [
+    { "id": "user", "type": "external", "label": "Product Manager", "sublabel": "skill user", "pos": [40, 300], "size": [130, 50] },
+    { "id": "marketing", "type": "frontend", "label": "Marketing Skills", "sublabel": "48 skills", "pos": [260, 80], "size": [150, 70] },
+    { "id": "pm-disc", "type": "backend", "label": "PM Discovery", "sublabel": "13 skills", "pos": [260, 200], "size": [150, 70] },
+    { "id": "pm-strat", "type": "backend", "label": "PM Strategy", "sublabel": "12 skills", "pos": [260, 320], "size": [150, 70] },
+    { "id": "pm-exec", "type": "backend", "label": "PM Execution", "sublabel": "16 skills", "pos": [520, 200], "size": [150, 70] },
+    { "id": "pm-gtm", "type": "backend", "label": "PM GTM", "sublabel": "6 skills", "pos": [520, 80], "size": [150, 70] },
+    { "id": "pm-analytics", "type": "database", "label": "PM Analytics", "sublabel": "3 skills", "pos": [520, 320], "size": [150, 70] },
+    { "id": "pm-research", "type": "cloud", "label": "PM Research", "sublabel": "7 skills", "pos": [780, 80], "size": [150, 70] },
+    { "id": "pm-ai", "type": "security", "label": "PM AI Shipping", "sublabel": "3 skills", "pos": [780, 200], "size": [150, 70] },
+    { "id": "pm-toolkit", "type": "messagebus", "label": "PM Toolkit", "sublabel": "4 skills", "pos": [780, 320], "size": [150, 70] },
+    { "id": "output", "type": "external", "label": "Product Output", "sublabel": " shipped product", "pos": [1020, 200], "size": [130, 50] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Marketing Layer", "wraps": ["marketing", "pm-gtm"] },
+    { "kind": "region", "label": "PM Core Layer", "wraps": ["pm-disc", "pm-strat", "pm-exec", "pm-analytics"] },
+    { "kind": "region", "label": "PM Support Layer", "wraps": ["pm-research", "pm-ai", "pm-toolkit"] }
+  ],
+  "connections": [
+    { "id": "user-marketing", "from": "user", "to": "marketing", "label": "uses", "variant": "emphasis" },
+    { "id": "user-disc", "from": "user", "to": "pm-disc", "label": "uses", "variant": "emphasis" },
+    { "id": "user-strat", "from": "user", "to": "pm-strat", "label": "uses", "variant": "emphasis" },
+    { "id": "user-exec", "from": "user", "to": "pm-exec", "label": "uses", "variant": "emphasis" },
+    { "id": "disc-strat", "from": "pm-disc", "to": "pm-strat", "label": "feeds into", "variant": "default", "labelDy": 24 },
+    { "id": "strat-exec", "from": "pm-strat", "to": "pm-exec", "label": "drives", "variant": "emphasis" },
+    { "id": "exec-gtm", "from": "pm-exec", "to": "pm-gtm", "label": "informs", "variant": "default" },
+    { "id": "gtm-output", "from": "pm-gtm", "to": "output", "label": "launches", "variant": "emphasis" },
+    { "id": "exec-analytics", "from": "pm-exec", "to": "pm-analytics", "label": "measures", "variant": "default", "labelDy": 24 },
+    { "id": "research-exec", "from": "pm-research", "to": "pm-exec", "label": "supports", "variant": "default" },
+    { "id": "ai-exec", "from": "pm-ai", "to": "pm-exec", "label": "reviews", "variant": "default" },
+    { "id": "toolkit-all", "from": "pm-toolkit", "to": "pm-exec", "label": "templates", "variant": "dashed" },
+    { "id": "marketing-exec", "from": "marketing", "to": "pm-exec", "label": "channels", "variant": "default" }
+  ]
+}

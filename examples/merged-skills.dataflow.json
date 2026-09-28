@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Growth Skills — Data Flow",
+    "output": "examples/merged-skills.dataflow.html",
+    "viewBox": [1200, 800],
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "input-flow", "label": "Input data", "focus": ["research", "disc", "strat"], "note": "Market, user, and competitor data enter here." },
+      { "id": "transform-flow", "label": "Transform", "focus": ["exec", "gtm", "marketing"], "note": "Skills transform inputs into outputs." },
+      { "id": "output-flow", "label": "Output & feedback", "focus": ["analytics", "ai", "toolkit"], "note": "Shipped product and measurement data flow out." }
+    ]
+  },
+  "stages": [
+    { "label": "Input" },
+    { "label": "Transform" },
+    { "label": "Output" },
+    { "label": "Feedback" }
+  ],
+  "nodes": [
+    { "id": "market-data", "type": "frontend", "label": "Market Data", "sublabel": "segments, personas", "stage": 0, "row": 0, "tag": "research" },
+    { "id": "user-data", "type": "backend", "label": "User Data", "sublabel": "journeys, interviews", "stage": 0, "row": 1, "tag": "research" },
+    { "id": "competitor-data", "type": "cloud", "label": "Competitor Data", "sublabel": "analysis, battlecards", "stage": 0, "row": 2, "tag": "research" },
+    { "id": "research", "type": "security", "label": "PM Research", "sublabel": "7 skills", "stage": 1, "row": 0, "tag": "input" },
+    { "id": "disc", "type": "security", "label": "PM Discovery", "sublabel": "13 skills", "stage": 1, "row": 1, "tag": "transform" },
+    { "id": "strat", "type": "security", "label": "PM Strategy", "sublabel": "12 skills", "stage": 1, "row": 2, "tag": "transform" },
+    { "id": "exec", "type": "security", "label": "PM Execution", "sublabel": "16 skills", "stage": 1, "row": 3, "tag": "transform" },
+    { "id": "gtm", "type": "security", "label": "PM GTM", "sublabel": "6 skills", "stage": 2, "row": 0, "tag": "output" },
+    { "id": "marketing", "type": "security", "label": "Marketing", "sublabel": "48 skills", "stage": 2, "row": 1, "tag": "output" },
+    { "id": "analytics", "type": "database", "label": "PM Analytics", "sublabel": "3 skills", "stage": 2, "row": 2, "tag": "output" },
+    { "id": "ai", "type": "security", "label": "PM AI Shipping", "sublabel": "3 skills", "stage": 2, "row": 3, "tag": "output" },
+    { "id": "toolkit", "type": "messagebus", "label": "PM Toolkit", "sublabel": "4 skills", "stage": 3, "row": 0, "tag": "feedback" },
+    { "id": "feedback", "type": "external", "label": "Iterate", "sublabel": "feedback loop", "stage": 3, "row": 1, "tag": "feedback" }
+  ],
+  "flows": [
+    { "from": "market-data", "to": "research", "label": "market input", "classification": "input", "variant": "emphasis", "route": "straight" },
+    { "from": "user-data", "to": "disc", "label": "user input", "classification": "input", "variant": "emphasis", "route": "straight" },
+    { "from": "competitor-data", "to": "strat", "label": "competitor input", "classification": "input", "variant": "emphasis", "route": "straight" },
+    { "from": "research", "to": "disc", "label": "segments → features", "classification": "transform", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "disc", "to": "strat", "label": "features → strategy", "classification": "transform", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "strat", "to": "exec", "label": "strategy → plan", "classification": "transform", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "exec", "to": "gtm", "label": "plan → launch", "classification": "transform", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "gtm", "to": "marketing", "label": "launch → campaign", "classification": "transform", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "marketing", "to": "analytics", "label": "campaign data", "classification": "output", "variant": "dashed", "route": "vertical-channel" },
+    { "from": "exec", "to": "analytics", "label": "shipping metrics", "classification": "output", "variant": "default", "route": "vertical-channel" },
+    { "from": "analytics", "to": "ai", "label": "metrics → review", "classification": "output", "variant": "default", "route": "vertical-channel" },
+    { "from": "ai", "to": "toolkit", "label": "insights → templates", "classification": "feedback", "variant": "dashed", "route": "vertical-channel" },
+    { "from": "toolkit", "to": "disc", "label": "templates → refine", "classification": "feedback", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "toolkit", "to": "strat", "label": "templates → adjust", "classification": "feedback", "variant": "dashed", "route": "vertical-channel" },
+    { "from": "feedback", "to": "research", "label": "re-enter", "classification": "feedback", "variant": "security", "route": "straight" }
+  ],
+  "cards": [
+    { "dot": "amber", "title": "Data Flow", "items": ["Market → Research → Discovery → Strategy → Execution → GTM → Marketing"] },
+    { "dot": "emerald", "title": "Feedback Loop", "items": ["Analytics → AI Shipping → Toolkit → Refine Discovery/Strategy"] }
+  ]
+}

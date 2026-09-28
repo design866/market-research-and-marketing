@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "PM Skill Usage Sequence",
+    "output": "examples/merged-skills.sequence.html",
+    "viewBox": [1200, 680],
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "discovery", "label": "Discovery & Strategy", "focus": ["research", "disc", "strat"], "note": "Phase 1: understand the market and define the product." },
+      { "id": "execution", "label": "Execution & Launch", "focus": ["exec", "gtm", "marketing"], "note": "Phase 2: build, ship, and market." },
+      { "id": "measure", "label": "Measure & Iterate", "focus": ["analytics", "ai", "exec"], "note": "Phase 3: measure results and improve." }
+    ]
+  },
+  "participants": [
+    { "id": "pm", "type": "external", "label": "PM" },
+    { "id": "research", "type": "cloud", "label": "Research" },
+    { "id": "disc", "type": "backend", "label": "Discovery" },
+    { "id": "strat", "type": "backend", "label": "Strategy" },
+    { "id": "exec", "type": "backend", "label": "Execution" },
+    { "id": "gtm", "type": "backend", "label": "GTM" },
+    { "id": "marketing", "type": "frontend", "label": "Marketing" },
+    { "id": "analytics", "type": "database", "label": "Analytics" },
+    { "id": "ai", "type": "security", "label": "AI Shipping" }
+  ],
+  "segments": [
+    { "from": 100, "to": 260, "label": "Phase 1: Discover" },
+    { "from": 280, "to": 460, "label": "Phase 2: Build & Launch" },
+    { "from": 480, "to": 640, "label": "Phase 3: Measure" }
+  ],
+  "messages": [
+    { "from": "pm", "to": "research", "y": 160, "label": "define market", "variant": "emphasis" },
+    { "from": "research", "to": "disc", "y": 200, "label": "user segments", "variant": "emphasis" },
+    { "from": "disc", "to": "strat", "y": 260, "label": "opportunities", "variant": "default" },
+    { "from": "strat", "to": "exec", "y": 310, "label": "product vision", "variant": "emphasis" },
+    { "from": "exec", "to": "gtm", "y": 360, "label": "release plan", "variant": "default" },
+    { "from": "gtm", "to": "marketing", "y": 410, "label": "campaign", "variant": "emphasis" },
+    { "from": "marketing", "to": "analytics", "y": 460, "label": "performance data", "variant": "dashed" },
+    { "from": "analytics", "to": "ai", "y": 510, "label": "metrics report", "variant": "default" },
+    { "from": "ai", "to": "pm", "y": 550, "label": "review & insights", "variant": "emphasis" },
+    { "from": "pm", "to": "disc", "y": 580, "label": "refine features", "variant": "dashed" },
+    { "from": "pm", "to": "strat", "y": 600, "label": "adjust strategy", "variant": "dashed" },
+    { "from": "exec", "to": "pm", "y": 620, "label": "shipped", "variant": "return" }
+  ],
+  "activations": [
+    { "participant": "research", "from": 190, "to": 250, "type": "cloud" },
+    { "participant": "disc", "from": 230, "to": 270, "type": "backend" },
+    { "participant": "strat", "from": 270, "to": 310, "type": "backend" },
+    { "participant": "exec", "from": 310, "to": 390, "type": "backend" },
+    { "participant": "gtm", "from": 350, "to": 410, "type": "backend" },
+    { "participant": "marketing", "from": 390, "to": 430, "type": "frontend" },
+    { "participant": "analytics", "from": 420, "to": 470, "type": "database" },
+    { "participant": "ai", "from": 460, "to": 510, "type": "security" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Three Phases", "items": ["Discover → Build & Launch → Measure", "Each phase feeds the next"] },
+    { "dot": "orange", "title": "Feedback Loops", "items": ["Analytics → PM → Discovery", "AI review → PM → Strategy"] }
+  ]
+}
