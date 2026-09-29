@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'PingFang SC', sans-serif; background: #f8f9fa; padding: 40px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 32px; }
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.06); border-left: 4px solid; }
+  .card.purple { border-color: #7c3aed; }
+  .card.blue { border-color: #3b82f6; }
+  .card.green { border-color: #10b981; }
+  .card.orange { border-color: #f59e0b; }
+  .card.red { border-color: #ef4444; }
+  .card h3 { font-size: 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .card p { font-size: 13px; color: #666; line-height: 1.6; }
+  .icon { font-size: 24px; }
+  .stat-bar { display: flex; align-items: center; gap: 12px; margin: 6px 0; }
+  .stat-bar .label { font-size: 12px; color: #888; width: 80px; }
+  .stat-bar .bar { flex: 1; height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; }
+  .stat-bar .fill { height: 100%; border-radius: 4px; }
+  .stat-bar .val { font-size: 12px; font-weight: 600; width: 40px; text-align: right; }
+  .purple .fill { background: #7c3aed; }
+  .blue .fill { background: #3b82f6; }
+  .green .fill { background: #10b981; }
+  .orange .fill { background: #f59e0b; }
+  .red .fill { background: #ef4444; }
+  .comparison { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.06); margin-bottom: 20px; }
+  .comparison h3 { font-size: 16px; margin-bottom: 16px; color: #1a1a2e; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; padding: 8px 12px; background: #f3f4f6; font-size: 12px; color: #666; }
+  td { padding: 10px 12px; border-bottom: 1px solid #f3f4f6; font-size: 13px; }
+  .tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .tag.green { background: #d1fae5; color: #059669; }
+  .tag.blue { background: #dbeafe; color: #2563eb; }
+  .tag.purple { background: #ede9fe; color: #7c3aed; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🚀 Market Research and Marketing</h1>
+  <p class="subtitle">Product & Marketing Manager skill suite — 109 skills unified</p>
+
+  <div class="card-grid">
+    <div class="card purple">
+      <h3><span class="icon">🎯</span> 109 Skills</h3>
+      <p>Marketing (48) + PM Core (31) + PM Support (14) = one unified suite. No switching between repos.</p>
+    </div>
+    <div class="card blue">
+      <h3><span class="icon">📊</span> 3-Layer Architecture</h3>
+      <p>Marketing → PM Core → PM Support. Clear separation of concerns, easy to navigate.</p>
+    </div>
+    <div class="card green">
+      <h3><span class="icon">🔄</span> Auto-Generated</h3>
+      <p>Architecture, workflow, sequence, dataflow diagrams auto-generated from JSON spec.</p>
+    </div>
+    <div class="card orange">
+      <h3><span class="icon">📝</span> PRD Ready</h3>
+      <p>PM toolkit: PRD templates, grammar check, privacy policy, resume review.</p>
+    </div>
+    <div class="card red">
+      <h3><span class="icon">🤖</span> AI Shipping</h3>
+      <p>Code review, delivery automation, A/B testing, cohort analysis.</p>
+    </div>
+    <div class="card purple">
+      <h3><span class="icon">⚡</span> Quick Start</h3>
+      <p><code>skill_view(name='ab-testing')</code> — load any skill in seconds.</p>
+    </div>
+  </div>
+
+  <div class="comparison" style="margin-top: 24px;">
+    <h3>📈 Skill Distribution</h3>
+    <div class="stat-bar"><span class="label">Marketing</span><div class="bar"><div class="fill" style="width:100%"></div></div><span class="val">48</span></div>
+    <div class="stat-bar"><span class="label">PM Core</span><div class="bar"><div class="fill" style="width:65%"></div></div><span class="val">31</span></div>
+    <div class="stat-bar"><span class="label">PM Support</span><div class="bar"><div class="fill" style="width:30%"></div></div><span class="val">14</span></div>
+  </div>
+
+  <div class="comparison">
+    <h3>🏆 Advantages vs Single-Repo Skills</h3>
+    <table>
+      <tr><th>Feature</th><th>Before</th><th>Now</th></tr>
+      <tr><td>Skills</td><td>48 or 69</td><td><span class="tag green">109</span></td></tr>
+      <tr><td>Layers</td><td>1</td><td><span class="tag blue">3</span></td></tr>
+      <tr><td>Diagrams</td><td>manual</td><td><span class="tag purple">auto</span></td></tr>
+      <tr><td>PRD</td><td>none</td><td><span class="tag green">✅</span></td></tr>
+      <tr><td>AI Shipping</td><td>none</td><td><span class="tag green">✅</span></td></tr>
+      <tr><td>Analytics</td><td>basic</td><td><span class="tag blue">A/B, cohort, SQL</span></td></tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>
