@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="marketing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="pmcore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="pmsupport" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" fill="#fff" font-size="28" font-weight="700">Growth Skills — Merged Architecture</text>
+  <text x="600" y="75" text-anchor="middle" fill="#94a3b8" font-size="14">Marketing (48) + PM Core (69) = 109 skills unified</text>
+  <!-- Marketing Layer -->
+  <rect x="60" y="100" width="1080" height="130" rx="12" fill="url(#marketing)" opacity="0.15" stroke="#7c3aed" stroke-width="1"/>
+  <text x="80" y="125" fill="#a78bfa" font-size="12" font-weight="600">MARKETING LAYER</text>
+  <rect x="80" y="140" width="160" height="50" rx="8" fill="#7c3aed" opacity="0.8"/>
+  <text x="160" y="160" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Marketing</text>
+  <text x="160" y="178" text-anchor="middle" fill="#e0d4fc" font-size="10">48 skills</text>
+  <text x="280" y="160" text-anchor="middle" fill="#c4b5fd" font-size="20">→</text>
+  <rect x="310" y="140" width="160" height="50" rx="8" fill="#7c3aed" opacity="0.8"/>
+  <text x="390" y="160" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">PM GTM</text>
+  <text x="390" y="178" text-anchor="middle" fill="#e0d4fc" font-size="10">6 skills</text>
+  <!-- PM Core Layer -->
+  <rect x="60" y="250" width="1080" height="130" rx="12" fill="url(#pmcore)" opacity="0.15" stroke="#3b82f6" stroke-width="1"/>
+  <text x="80" y="275" fill="#93c5fd" font-size="12" font-weight="600">PM CORE LAYER</text>
+  <rect x="80" y="290" width="140" height="50" rx="8" fill="#3b82f6" opacity="0.8"/>
+  <text x="150" y="310" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Discovery</text>
+  <text x="150" y="328" text-anchor="middle" fill="#dbeafe" font-size="10">13 skills</text>
+  <text x="260" y="310" text-anchor="middle" fill="#93c5fd" font-size="14">→</text>
+  <rect x="280" y="290" width="140" height="50" rx="8" fill="#3b82f6" opacity="0.8"/>
+  <text x="350" y="310" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Strategy</text>
+  <text x="350" y="328" text-anchor="middle" fill="#dbeafe" font-size="10">12 skills</text>
+  <text x="460" y="310" text-anchor="middle" fill="#93c5fd" font-size="14">→</text>
+  <rect x="480" y="290" width="140" height="50" rx="8" fill="#3b82f6" opacity="0.8"/>
+  <text x="550" y="310" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Execution</text>
+  <text x="550" y="328" text-anchor="middle" fill="#dbeafe" font-size="10">16 skills</text>
+  <text x="660" y="310" text-anchor="middle" fill="#93c5fd" font-size="14">→</text>
+  <rect x="680" y="290" width="140" height="50" rx="8" fill="#3b82f6" opacity="0.8"/>
+  <text x="750" y="310" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Analytics</text>
+  <text x="750" y="328" text-anchor="middle" fill="#dbeafe" font-size="10">3 skills</text>
+  <!-- PM Support Layer -->
+  <rect x="60" y="400" width="1080" height="130" rx="12" fill="url(#pmsupport)" opacity="0.15" stroke="#10b981" stroke-width="1"/>
+  <text x="80" y="425" fill="#6ee7b7" font-size="12" font-weight="600">PM SUPPORT LAYER</text>
+  <rect x="80" y="440" width="140" height="50" rx="8" fill="#10b981" opacity="0.8"/>
+  <text x="150" y="460" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Research</text>
+  <text x="150" y="478" text-anchor="middle" fill="#d1fae5" font-size="10">7 skills</text>
+  <text x="260" y="460" text-anchor="middle" fill="#6ee7b7" font-size="14">→</text>
+  <rect x="280" y="440" width="140" height="50" rx="8" fill="#10b981" opacity="0.8"/>
+  <text x="350" y="460" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">AI Ship</text>
+  <text x="350" y="478" text-anchor="middle" fill="#d1fae5" font-size="10">3 skills</text>
+  <text x="460" y="460" text-anchor="middle" fill="#6ee7b7" font-size="14">→</text>
+  <rect x="480" y="440" width="140" height="50" rx="8" fill="#10b981" opacity="0.8"/>
+  <text x="550" y="460" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Toolkit</text>
+  <text x="550" y="478" text-anchor="middle" fill="#d1fae5" font-size="10">4 skills</text>
+  <!-- Stats -->
+  <text x="600" y="570" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">109 Skills</text>
+  <text x="600" y="595" text-anchor="middle" fill="#94a3b8" font-size="12">3 Layers · 10 Modules · MIT License</text>
+</svg>

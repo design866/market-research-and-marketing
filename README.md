@@ -51,7 +51,11 @@ archify deliver workflow examples/merged-skills.workflow.json
 
 ## 🎨 Cover
 
-![Cover](examples/cover.html)
+![Cover](examples/cover.svg)
+
+## 🏗️ Architecture
+
+![Architecture](examples/merged-skills-architecture.svg)
 
 ## 📈 Stats
 
