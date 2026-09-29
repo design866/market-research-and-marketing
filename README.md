@@ -57,7 +57,18 @@ archify deliver workflow examples/merged-skills.workflow.json
 
 ![Architecture](examples/merged-skills-architecture.svg)
 
-## 📈 Stats
+## 🏆 Core Advantages
+
+| Advantage | Detail |
+|-----------|--------|
+| **109 Skills** | Marketing (48) + PM Core (31) + PM Support (14) |
+| **3-Layer Architecture** | Marketing → PM Core → PM Support |
+| **Auto-Generated Diagrams** | Architecture, workflow, sequence, dataflow |
+| **PRD Ready** | PRD templates, grammar check, privacy policy |
+| **AI Shipping** | Code review, delivery automation, A/B testing |
+| **Quick Start** | `skill_view(name='ab-testing')` — seconds |
+
+## 📈 Skill Distribution
 
 | Metric | Value |
 |--------|-------|
